@@ -11,6 +11,13 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="src/output.css" />
     <title>
       Frontend Mentor | Fylo landing page with dark theme and features grid
@@ -234,7 +241,7 @@
 
       <!-- testimonials -->
       <section
-        class="relative mx-auto flex max-w-[1180px] flex-col gap-6 px-12 pt-[9px] xl:flex-row xl:gap-10 xl:px-0 xl:pr-5 xl:pt-[59px]"
+        class="relative mx-auto flex max-w-[1180px] flex-col items-center gap-6 px-12 pt-[9px] xl:flex-row xl:gap-10 xl:px-0 xl:pr-5 xl:pt-[59px]"
       >
         <!-- quote -->
         <div
@@ -246,7 +253,7 @@
 
         <!-- testimonial -->
         <div
-          class="relative z-10 max-w-[360px] rounded-[3.933px] bg-dark-blue-testimonial-bg px-5 py-6 font-open-sans shadow-testimonial xl:pb-[26px] xl:pl-[26px] xl:pr-[24.7px] xl:pt-10"
+          class="relative z-20 max-w-[360px] rounded-[3.933px] bg-dark-blue-testimonial-bg px-5 py-6 font-open-sans shadow-testimonial xl:pb-[26px] xl:pl-[26px] xl:pr-[24.7px] xl:pt-10"
         >
           <p
             class="mb-[17px] text-[10px] leading-[18px] xl:mb-6 xl:text-sm xl:leading-normal xl:tracking-[0.5px]"
@@ -362,46 +369,148 @@
       class="relative bg-dark-blue-footer-bg px-7 pb-[52px] pt-[259px] xl:px-0 xl:pb-[53px] xl:pt-[169px]"
     >
       <!-- cta -->
-      <div class="absolute"></div>
+      <div
+        class="shadow-cta absolute -top-[177px] left-1/2 w-[336px] -translate-x-1/2 rounded-[9px] bg-dark-blue-intro-email-bg px-7 pb-[37px] pt-10 text-center xl:-top-[159px] xl:w-[863px] xl:px-[77px] xl:pb-[41px] xl:pt-[42px]"
+      >
+        <h4
+          class="mb-4 font-raleway text-lg font-bold leading-6 xl:text-[32px] xl:leading-[48px]"
+        >
+          Get early access today
+        </h4>
+        <p
+          class="mb-8 max-w-[673px] font-open-sans text-sm leading-normal xl:mb-[38px]"
+        >
+          It only takes a minute to sign up and our free starter tier is
+          extremely generous. If you have any questions, our support team would
+          be happy to help you.
+        </p>
+
+        <form
+          class="flex w-full flex-col gap-6 xl:flex-row xl:gap-[29px]"
+          id="form"
+        >
+          <!-- input group -->
+          <div class="flex w-full max-w-[480px] flex-col gap-2">
+            <input
+              type="text"
+              id="email"
+              placeholder="email@example.com"
+              class="max-h-12 rounded-3xl pb-[15px] pl-[29px] pt-[19px] font-open-sans text-[10px] leading-none text-[#07043B] outline-none placeholder:text-[#C0C0C0] xl:py-4 xl:pl-[38px] xl:text-xs"
+            />
+            <p
+              class="hidden pl-[29px] text-left font-open-sans text-[10px] font-bold leading-none text-light-red xl:pl-[38px]"
+              id="error-text"
+            >
+              Error, please check your email
+            </p>
+          </div>
+          <!-- input group -->
+          <button
+            id="btn-submit"
+            class="rounded-3xl bg-gradient-to-r from-cyan to-blue py-[17px] font-raleway text-sm font-bold leading-none drop-shadow-button transition-all hover:from-[#8ADAE3] hover:to-[#8ADAE3] xl:w-[200px] xl:self-start"
+            type="submit"
+          >
+            Get Started For Free
+          </button>
+        </form>
+      </div>
       <!-- cta -->
 
       <!-- container -->
-      <div class="mx-auto max-w-[1240px]">
+      <div class="mx-auto max-w-[1240px] font-open-sans">
         <!-- logo -->
         <div class="mb-10 w-[108px] pl-3 xl:mb-14 xl:pl-0">
           <img src="./images/logo.svg" alt="logo" class="w-full" />
         </div>
         <!-- logo -->
 
-        <!-- location -->
-        <div class=""></div>
-        <!-- location -->
+        <div class="xl:flex xl:flex-row xl:justify-between">
+          <!-- location -->
+          <div class="mb-4 flex max-w-[379px] items-start gap-4 xl:mb-0">
+            <img
+              src="./images/icon-location.svg"
+              alt="icon location"
+              class="pt-2"
+            />
+            <p class="leading-normal">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
+          <!-- location -->
 
-        <!-- contact -->
-        <div class=""></div>
-        <!-- contact -->
+          <!-- contact -->
+          <div class="mb-14 flex flex-col gap-4 xl:mb-0">
+            <!-- phone -->
+            <div class="flex items-center gap-4">
+              <img src="./images/icon-phone.svg" alt="icon phone" />
+              <a href="tel:+1-543-123-4567" class="text-sm leading-normal"
+                >+1-543-123-4567</a
+              >
+            </div>
+            <!-- phone -->
 
-        <!-- menu -->
-        <div class=""></div>
-        <!-- menu -->
+            <!-- email -->
+            <div class="flex items-center gap-4">
+              <img src="./images/icon-email.svg" alt="icon email" />
+              <a href="mailto:example@fylo.com" class="text-sm leading-normal"
+                >example@fylo.com</a
+              >
+            </div>
+            <!-- email -->
+          </div>
+          <!-- contact -->
 
-        <!-- menu -->
-        <div class=""></div>
-        <!-- menu -->
+          <!-- menu -->
+          <ul class="mb-12 flex flex-col gap-4 leading-none xl:mb-0">
+            <li>
+              <a href="#" class="transition-all hover:font-bold">About Us</a>
+            </li>
+            <li><a href="#" class="transition-all hover:font-bold">Jobs</a></li>
+            <li>
+              <a href="#" class="transition-all hover:font-bold">Press</a>
+            </li>
+            <li><a href="#" class="transition-all hover:font-bold">Blog</a></li>
+          </ul>
+          <!-- menu -->
 
-        <!-- socials -->
-        <div class=""></div>
-        <!-- socials -->
+          <!-- menu -->
+          <ul class="mb-14 flex flex-col gap-4 leading-none xl:mb-0">
+            <li>
+              <a href="#" class="transition-all hover:font-bold">Contact Us</a>
+            </li>
+            <li>
+              <a href="#" class="transition-all hover:font-bold">Terms</a>
+            </li>
+            <li>
+              <a href="#" class="transition-all hover:font-bold">Privacy</a>
+            </li>
+          </ul>
+          <!-- menu -->
+
+          <!-- socials -->
+          <div
+            class="flex items-center justify-center gap-3 text-xs xl:items-start xl:justify-start xl:text-sm"
+          >
+            <span
+              class="flex size-7 cursor-pointer items-center justify-center rounded-full border border-white transition-colors hover:border-cyan hover:text-cyan xl:size-8"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></span>
+            <span
+              class="flex size-7 cursor-pointer items-center justify-center rounded-full border border-white transition-colors hover:border-cyan hover:text-cyan xl:size-8"
+              ><i class="fa-brands fa-twitter"></i
+            ></span>
+            <span
+              class="flex size-7 cursor-pointer items-center justify-center rounded-full border border-white transition-colors hover:border-cyan hover:text-cyan xl:size-8"
+              ><i class="fa-brands fa-instagram"></i
+            ></span>
+          </div>
+          <!-- socials -->
+        </div>
       </div>
       <!-- container -->
     </footer>
 
-    Get early access today It only takes a minute to sign up and our free
-    starter tier is extremely generous. If you have any questions, our support
-    team would be happy to help you. Get Started For Free Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua +1-543-123-4567 example@fylo.com About Us Jobs
-    Press Blog Contact Us Terms Privacy
     <script src="./src/script.js"></script>
   </body>
 </html>
